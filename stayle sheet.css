@@ -411,6 +411,12 @@ footer p{
 
 }
 @media only screen and (max-width:700px){
+    .sliderbox::before{
+       display: none;
+    }
+    .sliderbox::after {
+        display: none;
+    }
     .nav-under{
         display: none;
     }
