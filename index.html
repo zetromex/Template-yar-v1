@@ -14,8 +14,13 @@
 ><div class="container">
     <div class="navbar">
         <img src="image/Union%201.png" class="logo" alt="">
+        <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+            <span class="sr-only">
+                menu
+            </span>
+        </button>
         <nav>
-            <ul id="">
+            <ul id="primary-nav" class="primary-nav flex" data-visibility="false">
                 <li><a href="">Home</a></li>
                 <li><a href="">Gallery</a></li>
                 <li><a href="">Prices</a></li>
@@ -23,7 +28,7 @@
                 <li><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
             </ul>
         </nav>
-        <img src="image/Icon%20feather-menu.png" class="menu-icon" onclick="togglemenu()">
+
         <div class="title">
             <h1>Loream ispam</h1>
             <p>Lorem Ipsum is simply dumm</p>
@@ -42,8 +47,9 @@
     </div>
     <div class="nav-under">
         <h3>SCROLL DOWN  <i class="fa-solid fa-circle-arrow-down"></i> </h3>
-        <button><i class="fa-solid fa-arrow-up nav-icon"></i></button>
     </div>
+    <div class="fixed-b"><a href="#top"> <i class="fa-solid fa-arrow-up nav-icon"></i></a> </div>
+
     <div class="title-2">
         <h1>Loream ispam</h1>
         <p>Lorem Ipsum is simply dumm</p>

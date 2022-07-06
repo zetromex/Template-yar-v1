@@ -1,5 +1,19 @@
-const nexticon = "<i class=\"fa-solid fa-arrow-right Caricon\"></i>"
-const previcon = "<i class=\"fa-solid fa-arrow-left  Caricon\"></i>"
+const PrimaryNav = document.querySelector('.primary-nav')
+const navToggle   = document.querySelector('.mobile-nav-toggle')
+
+navToggle.addEventListener("click" ,() =>{
+    const Show = PrimaryNav.getAttribute("data-visibility")
+    if (Show === "false"){
+        PrimaryNav.setAttribute("data-visibility" , true)
+        navToggle.setAttribute("aria-expanded", true)
+    }
+    else {
+        PrimaryNav.setAttribute("data-visibility" , false)
+        navToggle.setAttribute("aria-expanded", false)
+    }
+})
+
+
 
 
 $(document).ready(function(){
