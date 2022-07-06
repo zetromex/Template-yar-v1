@@ -195,7 +195,6 @@ nav ul li a:hover{
     width: 100%;
     height: 35vh;
     background-image: url("image/test 2.png");
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -315,6 +314,9 @@ position: relative;
     justify-content: center;
     width: 100%;
     background-color: #356D53;
+}
+.map-holder p{
+    color: #FFFFFF;
 }
 .map img{
     padding: 20px 0;
@@ -454,6 +456,7 @@ footer p{
     }
     .menu-icon{
         display: block;
+        margin-right:15px;
     }
     .row{
         flex-direction:column-reverse;

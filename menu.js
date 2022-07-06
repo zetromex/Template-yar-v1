@@ -8,7 +8,7 @@ $(document).ready(function(){
             [$('.am-next'),$('.am-prev')]
         ],
         loop:true,
-        margin:50,
+        margin:0,
         autoplay:true,
         autoplayTimeout:2000,
         autoplayHoverPause:true,
