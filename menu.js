@@ -17,7 +17,15 @@ navToggle.addEventListener("click" ,() =>{
         logoM.setAttribute("aria-expanded", false)
         Overall.setAttribute("aria-expanded", false)
     }
-
+})
+Overall.addEventListener("click",()=>{
+    const Show = PrimaryNav.getAttribute("data-visibility")
+    if (Show === "true"){
+        PrimaryNav.setAttribute("data-visibility" , false)
+        navToggle.setAttribute("aria-expanded", false)
+        logoM.setAttribute("aria-expanded", false)
+        Overall.setAttribute("aria-expanded", false)
+    }
 })
 
 
