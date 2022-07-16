@@ -1,16 +1,23 @@
 const PrimaryNav = document.querySelector('.primary-nav')
 const navToggle   = document.querySelector('.mobile-nav-toggle')
+const logoM = document.querySelector('.logo')
+const Overall = document.querySelector('.overall')
 
 navToggle.addEventListener("click" ,() =>{
     const Show = PrimaryNav.getAttribute("data-visibility")
     if (Show === "false"){
         PrimaryNav.setAttribute("data-visibility" , true)
         navToggle.setAttribute("aria-expanded", true)
+        logoM.setAttribute("aria-expanded", true)
+        Overall.setAttribute("aria-expanded", true)
     }
     else {
         PrimaryNav.setAttribute("data-visibility" , false)
         navToggle.setAttribute("aria-expanded", false)
+        logoM.setAttribute("aria-expanded", false)
+        Overall.setAttribute("aria-expanded", false)
     }
+
 })
 
 

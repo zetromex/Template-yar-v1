@@ -75,6 +75,9 @@ nav ul li button{
     cursor: pointer;
     outline: inherit;
 }
+.menu-pic{
+    display: none;
+}
 
 nav ul li a:hover{
     color: white;
@@ -135,7 +138,7 @@ nav ul li a:hover{
     position: fixed;
     right: 2rem;
     bottom:10px;
-    z-index: 110;
+    z-index: 90;
 
 }
 .card-holder{
@@ -418,8 +421,23 @@ footer p{
     cursor: pointer;
 
 }
+.overall{
+display: none;
+}
 @media only screen and (max-width:700px){
-    
+    .overall{
+        display: none;
+        height: 100%;
+        width: 100%;
+        background-color: 	rgba(49,49,49,0.4);
+        position: fixed;
+        z-index: 99;
+    }
+    .navbar{
+        position: fixed;
+        z-index: 100;
+    }
+
     .sliderbox::before{
        display: none;
     }
@@ -443,7 +461,6 @@ footer p{
     nav{
         text-align: left;
     }
-
     .primary-nav{
         position: fixed;
         display: flex;
@@ -456,15 +473,45 @@ footer p{
         padding: min(30vh, 10rem) 0;
         align-items: center;
         transform: translateX(100%);
+
     }
     .primary-nav[data-visibility="true"]{
         transform: translateX(0%);
+        transition: ease-out 1000ms;
     }
+    .mobile-nav-toggle[aria-expanded="true"]{
+
+        transform: translateX(-60vh) rotate(90deg);
+        transition: ease 1000ms;
+    }
+    .logo[aria-expanded="false"]{
+        transform: translateX(0%);
+        transition: ease 1000ms;
+    }
+    .primary-nav[data-visibility="false"]{
+        transform: translateX(100%);
+        transition: ease-in 500ms;
+    }
+    .mobile-nav-toggle[aria-expanded="false"]{
+        transform: rotate(180deg);
+        transition: ease 1000ms;
+
+    }
+    .logo[aria-expanded="true"]{
+        transform: translateX(-150%);
+        transition: ease 1000ms;
+    }
+    .overall[aria-expanded="true"]{
+        display: block;
+    }
+    .overall[aria-expanded="false"]{
+        display: none;
+    }
+
     .mobile-nav-toggle{
         position:absolute;
         width: 2rem;
         aspect-ratio: 1;
-        top: 2rem;
         border: none;
         right: 2rem;
         z-index: 999999;
@@ -472,6 +519,11 @@ footer p{
         background: url(image/Icon%20feather-menu.png);
         background-repeat: no-repeat;
 
+    }
+    .menu-pic{
+        display: block;
+        position: absolute;
+        top: 2rem;
     }
     .menu-icon{
         display: block;
