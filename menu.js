@@ -1,3 +1,4 @@
+/*
 const PrimaryNav = document.querySelector('.primary-nav')
 const navToggle   = document.querySelector('.mobile-nav-toggle')
 const logoM = document.querySelector('.logo')
@@ -27,9 +28,18 @@ Overall.addEventListener("click",()=>{
         Overall.setAttribute("aria-expanded", false)
     }
 })
+*/
 
+const Main = document.querySelector(".container")
+const navToggle = document.querySelector('.mobile-nav-toggle')
+const Overall = document.querySelector('.overall')
 
-
+navToggle.addEventListener("click",()=>{
+    Main.classList.toggle("Move")
+})
+Overall.addEventListener("click",()=>{
+    Main.classList.toggle("Move")
+})
 
 $(document).ready(function(){
     $('.carousel').owlCarousel({

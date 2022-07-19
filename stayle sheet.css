@@ -425,7 +425,48 @@ footer p{
 display: none;
 }
 @media only screen and (max-width:700px){
-    .overall{
+    .Move .overall{
+        display: block !important;
+        height: 100%;
+        width: 100%;
+        background-color: 	#555555;
+        opacity: 62%;
+        position: fixed;
+        z-index: 99;
+        transition: ease 1000ms;
+    }
+    .Move .logo{
+        transform: translateX(-150%);
+        transition: ease 1000ms;
+    }
+    .Move .mobile-nav-toggle{
+        position:absolute;
+        width: 2rem;
+        aspect-ratio: 1;
+        border: none;
+        right: 2rem;
+        z-index: 999999;
+        display: block;
+        background: url(image/Icon%20feather-menu.png);
+        background-repeat: no-repeat;
+        transform: translateX(-60vh) rotate(90deg);
+        transition: ease 1000ms;
+    }
+    .Move .primary-nav{
+        position: fixed;
+        display: flex;
+        gap:3em;
+        inset: 0 0 0 30%;
+        background: rgba(49,49,49,0.9);
+        backdrop-filter: blur(1rem);
+        z-index: 20;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 0;
+        align-items: center;
+        transform: translateX(0%) !important;
+        transition: ease-out 1000ms !important;
+    }
+    .container .overall{
         display: none;
         height: 100%;
         width: 100%;
@@ -433,6 +474,9 @@ display: none;
         opacity: 62%;
         position: fixed;
         z-index: 99;
+    }
+    .container .logo{
+        transition: ease 1000ms;
     }
     .navbar{
         position: fixed;
@@ -462,7 +506,7 @@ display: none;
     nav{
         text-align: left;
     }
-    .primary-nav{
+    .container .primary-nav{
         position: fixed;
         display: flex;
         gap:3em;
@@ -474,42 +518,9 @@ display: none;
         padding: min(30vh, 10rem) 0;
         align-items: center;
         transform: translateX(100%);
-
-    }
-    .primary-nav[data-visibility="true"]{
-        transform: translateX(0%);
-        transition: ease-out 1000ms;
-    }
-    .mobile-nav-toggle[aria-expanded="true"]{
-
-        transform: translateX(-60vh) rotate(90deg);
         transition: ease 1000ms;
     }
-    .logo[aria-expanded="false"]{
-        transform: translateX(0%);
-        transition: ease 1000ms;
-    }
-    .primary-nav[data-visibility="false"]{
-        transform: translateX(100%);
-        transition: ease-in 500ms;
-    }
-    .mobile-nav-toggle[aria-expanded="false"]{
-        transform: rotate(180deg);
-        transition: ease 1000ms;
-
-    }
-    .logo[aria-expanded="true"]{
-        transform: translateX(-150%);
-        transition: ease 1000ms;
-    }
-    .overall[aria-expanded="true"]{
-        display: block;
-    }
-    .overall[aria-expanded="false"]{
-        display: none;
-    }
-
-    .mobile-nav-toggle{
+    .container .mobile-nav-toggle{
         position:absolute;
         width: 2rem;
         aspect-ratio: 1;
@@ -519,7 +530,7 @@ display: none;
         display: block;
         background: url(image/Icon%20feather-menu.png);
         background-repeat: no-repeat;
-
+        transition: ease 1000ms;
     }
     .menu-pic{
         display: block;
