@@ -28,7 +28,7 @@ Overall.addEventListener("click",()=>{
         Overall.setAttribute("aria-expanded", false)
     }
 })
-*/
+
 
 const Main = document.querySelector(".container")
 const navToggle = document.querySelector('.mobile-nav-toggle')
@@ -40,6 +40,14 @@ navToggle.addEventListener("click",()=>{
 Overall.addEventListener("click",()=>{
     Main.classList.toggle("Move")
 })
+
+ */
+
+const Main = document.querySelector(".container")
+function MenuToggle (){
+    Main.classList.toggle("Move")
+}
+
 
 $(document).ready(function(){
     $('.carousel').owlCarousel({
